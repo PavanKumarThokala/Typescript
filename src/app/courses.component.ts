@@ -10,14 +10,19 @@ import { Component } from '@angular/core';
                 {{course}}
             </li>
         </ul>
+        <button (click)="onSave($event)" [style.backgroundColor]="isActive ? 'blue':'red'" class="btn btn-primary" [class.active]="isActive">Save</button>
         ` 
 })
 export class CoursesComponent{
     title = 'List of Courses'
+    isActive = true;
     courses;
     
     constructor(service: CoursesService){
         this.courses = service.getCourses();
+    }
+    onSave($event){
+        console.log("Button Clicked", $event);
     }
 
 }
