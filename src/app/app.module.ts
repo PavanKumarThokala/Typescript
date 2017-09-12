@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CouseComponent } from './couse/couse.component';
 import { Assin3Component } from './assin3/assin3.component';
+import { PanelComponent } from './panel/panel.component';
+import { LikeComponent } from './like/like.component';
 
 
 
@@ -22,7 +24,9 @@ import { Assin3Component } from './assin3/assin3.component';
     AuthorsComponent,
     StarComponent,
     Assin3Component,
-    SummaryPipe
+    SummaryPipe,
+    PanelComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,

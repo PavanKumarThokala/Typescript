@@ -4,6 +4,7 @@
 
 <authors></authors>
 
-<favourite></favourite>
+<favourite [isTrue]="post.isTrue" [likescount]="post.likescount" (change)="onFavouriteChanged($event)"></favourite>
 <br>
 <assin3></assin3>
+<app-panel><div class="Heading">Heading</div><div class="Body"><h1>Body</h1><p>some thing...</p></div></app-panel>

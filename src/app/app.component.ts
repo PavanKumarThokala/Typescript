@@ -1,4 +1,6 @@
+import { FavouriteChanged } from './star/star.component';
 import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular app';
+  post = {
+    title: 'Title',
+    isTrue: false,
+    likescount: 0 
+  }
+
+  onFavouriteChanged(eventArgs: FavouriteChanged){
+    console.log('Favourite changed:', eventArgs);
+  }
 }

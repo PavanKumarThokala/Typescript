@@ -12,12 +12,17 @@ export class SummaryPipe implements PipeTransform{
             'of',
             'the'
         ];
-        let words = value.split('');
+        let words = value.split(' ');
         for(var i=0;i<words.length;i++){
-            words[i]=words[i].substr(0, 1).toUpperCase() + words[i].substr(1).toLowerCase();
-            if (ofs.includes(words[i])){
+            if (i>0 && ofs.includes(words[i])){
                 words[i].toLowerCase();
             }
+            else
+            {
+                words[i] = words[i].substr(0, 1).toUpperCase() + words[i].substr(1).toLowerCase();
+            }
         }
-    };
+
+        return words.join(' ');
+    }
 }
